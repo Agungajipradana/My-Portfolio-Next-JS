@@ -57,7 +57,7 @@ const Contact = () => {
   const { isDarkMode } = darkModeContext;
 
   return (
-    <div id="contact" className={`py-2 ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
+    <div id="contact" className={`pt-2 pb-8 ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
       <div className="flex justify-center items-center text-center mt-20  lg:mt-24">
         <div className={`${isDarkMode ? "text-slate-50" : "text-slate-500"}`}>
           <h1 className="text-2xl font-semibold lg:text-3xl">Get In Touch</h1>

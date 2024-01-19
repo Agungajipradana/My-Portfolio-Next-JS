@@ -152,26 +152,19 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="dropdown dropdown-end">
-            <div tabIndex={0} role="button" className="btn m-1 bg-none p-0">
-              <label className="btn btn-circle swap swap-rotate">
-                <svg className="swap-off fill-current " xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
+          <div className="dropdown dropdown-end ">
+            <div tabIndex={0} role="button" className={`btn m-1 p-0 border-none ${isDarkMode ? "bg-gray-900" : "bg-slate-200"}`}>
+              <label className={`btn btn-circle swap swap-rotate border-none ${isDarkMode ? "bg-gray-900" : "bg-slate-200"}`}>
+                <svg className={`swap-off ${isDarkMode ? "fill-slate-200" : "fill-gray-900"}`} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512">
                   <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
                 </svg>
               </label>
             </div>
 
-            <ul tabIndex={0} className={` dropdown-content z-[1] menu mt-2 shadow bg-base-100 rounded-box w-52 ${isDarkMode ? "bg-gray-800" : "bg-white"}`}>
+            <ul tabIndex={0} className={` dropdown-content z-[1] menu mt-2 shadow bg-base-100 rounded-box w-52 ${isDarkMode ? "bg-gray-900 text-slate-200 " : "bg-slate-200 text-gray-900"}`}>
               {navLink.map((item) => (
                 <li key={item.path}>
-                  <ScrollLink
-                    to={item.path}
-                    spy={true}
-                    smooth={true}
-                    offset={-70}
-                    duration={500}
-                    className={`hover:bg-gray-800 hover:text-gray-800 transition duration-300 ease-out hover:ease-in  ${isDarkMode && "hover:bg-slate-300 hover:text-gray-900 "}`}
-                  >
+                  <ScrollLink to={item.path} spy={true} smooth={true} offset={-70} duration={500} className={` transition duration-300 ease-out  hover:ease-in `}>
                     {item.label}
                   </ScrollLink>
                 </li>

@@ -21,7 +21,7 @@ const About = () => {
                 I am a person who likes to pay attention to details in life. I found myself drawn to Web Developer because I wanted to build a website that would help other people. I`ve always felt challenged to create inovative websites to
                 solve life`s problems.
               </p>
-              <button className={`btn mt-5 ${isDarkMode ? "bg-gray-900 text-slate-50 hover:bg-slate-200 hover:text-gray-900" : "bg-slate-200 text-gray-900 hover:bg-gray-900 hover:text-slate-200"}`}>My Resume</button>
+              <button className={`btn mt-5 border-none ${isDarkMode ? "bg-gray-900 text-slate-50 hover:bg-slate-200 hover:text-gray-900" : "bg-slate-200 text-black hover:bg-gray-900 hover:text-slate-200 "}`}>My Resume</button>
             </div>
           </div>
         </div>
